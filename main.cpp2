@@ -1,0 +1,26 @@
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int main()
+{
+    ofstream outFile;
+
+    outFile.open("test file.txt");
+
+    if (outFile.is_open())
+    {
+        outFile << "Hello";
+
+        outFile.close();
+
+        cout << "Data saved to test file.txt successfully." << endl;
+    }
+    else
+    {
+        cout << "Unable to open file." << endl;
+    }
+
+    return 0;
+}
